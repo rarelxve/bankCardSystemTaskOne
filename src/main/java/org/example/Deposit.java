@@ -9,8 +9,12 @@ class Deposit extends BankProduct{
     }
 
     public void closeDeposit (){
-        balance = Float.valueOf(0);
+        balance = 0.00f;
         isClosedAccount = true;
+    }
+
+    public boolean isClosedAccount() {
+        return isClosedAccount;
     }
 
     public void refillBalance(boolean isClosedAccount, float sumOfRefill){
