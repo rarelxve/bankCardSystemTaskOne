@@ -8,6 +8,6 @@ class DebetCard extends Card{
     public void debitBalance(float sumOfDebit){
         if (balance<sumOfDebit) throw new IllegalArgumentException("Сумма списания больше баланса дебетовой карты");
         if (sumOfDebit<=0) throw new IllegalArgumentException("Невозможно списать со счета не положительное значение");
-        balance+=sumOfDebit;
+        balance-=sumOfDebit;
     }
 }
