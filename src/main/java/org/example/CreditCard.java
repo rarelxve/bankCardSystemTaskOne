@@ -1,6 +1,6 @@
 package org.example;
 
-public class CreditCard extends Card{
+class CreditCard extends Card{
     private double percentRate;
 
     public CreditCard(String name, String currency, float balance, double percentRate) {
@@ -9,6 +9,16 @@ public class CreditCard extends Card{
     }
 
     public double getLoanAmount(){
-        return Math.max(balance, 0);
+        return Math.abs(Math.min(balance, 0));
+    }
+
+    @Override
+    public void debitBalance(float sumOfDebit) {
+        if (sumOfDebit>0){
+            balance -= sumOfDebit;
+        }
+        else {
+            throw new IllegalArgumentException("Некорректная сумма");
+        }
     }
 }

@@ -1,6 +1,6 @@
 package org.example;
 
-public abstract class BankProduct {
+abstract class BankProduct {
     protected String name;
     protected String currency;
     protected Float balance;
@@ -21,14 +21,5 @@ public abstract class BankProduct {
 
     public double getBalance() {
         return balance;
-    }
-
-    protected void refillBalance(float sumOfRefill){
-        if (sumOfRefill>0){
-            balance += sumOfRefill;
-        }
-        else {
-            throw new IllegalArgumentException("Некорректная сумма");
-        }
     }
 }

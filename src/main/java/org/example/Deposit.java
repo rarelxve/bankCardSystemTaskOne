@@ -9,12 +9,13 @@ class Deposit extends BankProduct{
     }
 
     public void closeDeposit (){
-        balance = 0.00F;
+        balance = Float.valueOf(0);
         isClosedAccount = true;
     }
 
     public void refillBalance(boolean isClosedAccount, float sumOfRefill){
         if (isClosedAccount) throw new IllegalArgumentException("Вклад закрыт, пополнение невозможно");
         if (sumOfRefill<=0) throw new IllegalArgumentException("Некорректная сумма");
+        balance += sumOfRefill;
     }
 }

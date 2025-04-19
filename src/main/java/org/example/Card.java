@@ -5,12 +5,13 @@ abstract class Card extends BankProduct{
         super(name, currency, balance);
     }
 
-    protected void debitBalance (float sumOfDebit){
-        if (sumOfDebit>0){
-            balance -= sumOfDebit;
+    public void refillBalance(float sumOfRefill){
+        if (sumOfRefill>0){
+            balance += sumOfRefill;
         }
         else {
             throw new IllegalArgumentException("Некорректная сумма");
         }
     }
+    public abstract void debitBalance (float sumOfDebit);
 }
