@@ -1,4 +1,4 @@
-package org.example.CommonProducts;
+package org.example.commonProducts;
 
 public abstract class BankProduct {
     protected String name;

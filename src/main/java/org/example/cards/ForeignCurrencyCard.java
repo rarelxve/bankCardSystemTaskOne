@@ -1,4 +1,4 @@
-package org.example.Cards;
+package org.example.cards;
 
 class ForeignCurrencyCard extends Card{
     public ForeignCurrencyCard(String name, String currency, float balance) {

@@ -1,6 +1,6 @@
-package org.example.CardTests;
+package org.example.cardTests;
 
-import org.example.Cards.DebetCard;
+import org.example.cards.DebetCard;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
