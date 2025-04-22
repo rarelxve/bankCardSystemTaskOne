@@ -1,6 +1,6 @@
-package org.example;
+package org.example.CommonProducts;
 
-abstract class BankProduct {
+public abstract class BankProduct {
     protected String name;
     protected String currency;
     protected Float balance;

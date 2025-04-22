@@ -1,15 +1,8 @@
-package org.example;
+package org.example.Cards;
 
-class CreditCard extends Card{
-    private double percentRate;
-
-    public CreditCard(String name, String currency, float balance, double percentRate) {
+class ForeignCurrencyCard extends Card{
+    public ForeignCurrencyCard(String name, String currency, float balance) {
         super(name, currency, balance);
-        this.percentRate = percentRate;
-    }
-
-    public double getLoanAmount(){
-        return Math.abs(Math.min(balance, 0));
     }
 
     @Override

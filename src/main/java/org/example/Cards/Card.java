@@ -1,6 +1,8 @@
-package org.example;
+package org.example.Cards;
 
-abstract class Card extends BankProduct{
+import org.example.CommonProducts.BankProduct;
+
+public abstract class Card extends BankProduct {
     public Card(String name, String currency, float balance) {
         super(name, currency, balance);
     }

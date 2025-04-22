@@ -1,5 +1,6 @@
-package org.example;
+package org.example.DepositTest;
 
+import org.example.Deposits.Deposit;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

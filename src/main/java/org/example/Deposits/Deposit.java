@@ -1,6 +1,8 @@
-package org.example;
+package org.example.Deposits;
 
-class Deposit extends BankProduct{
+import org.example.CommonProducts.BankProduct;
+
+public class Deposit extends BankProduct {
     private boolean isClosedAccount;
 
     public Deposit(String name, String currency, float balance) {
