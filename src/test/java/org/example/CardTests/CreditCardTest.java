@@ -1,6 +1,7 @@
 package org.example.CardTests;
 
 import org.example.Cards.CreditCard;
+import org.example.Cards.DebetCard;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -61,6 +62,12 @@ class CreditCardTest {
         assertEquals(1000, card.getBalance());
     }
 
+    @Test
+    void refillBalanceIncreasesBalance() {
+        DebetCard debetCard = new DebetCard("Test", "RUB", 3000);
+        debetCard.refillBalance(1000);
+        assertEquals(4000, debetCard.getBalance());
+    }
     @Test
     void debitOperationZeroValue() {
         CreditCard card = new CreditCard("Test", "RUB", 300, 0.1);
